@@ -34,7 +34,7 @@ When you provide a list of columns in an ORDER BY command,
 SELECT id, occurred_at, account_id, events
     FROM web_events
     LIMIT 10
-    ORDER BY account_id;
+    ORDER BY account_id DESC;
 
 ### WHERE
 /*
@@ -65,3 +65,24 @@ This derived column, and its alias, are generally only temporary, existing just 
 - (Subtraction)
 / (Division)
 */
+
+### Logical Operators
+/*
+LIKE This allows you to perform operations similar to using WHERE and =, 
+    but for cases when you might not know exactly what you are looking for.
+    Frequently used with %. The % tells us that we might want any number of characters 
+        leading up to a particular set of characters or following a certain set of characters
+IN This allows you to perform operations similar to using WHERE and =, but for more than one condition.
+NOT This is used with IN and LIKE to select all of the rows NOT LIKE or NOT IN a certain condition.
+AND & BETWEEN These allow you to combine operations where all combined conditions must be true.
+OR This allows you to combine operations where at least one of the combined conditions must be true.
+*/
+
+### JOIN
+/*
+JOIN statements allow us to pull data from more than one table at a time.
+Use ON clause to specify a JOIN condition which is a logical statement to combine 
+    the table in FROM and JOIN statements.
+*/
+
+
